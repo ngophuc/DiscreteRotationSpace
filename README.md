@@ -1,4 +1,4 @@
-# JMIV_2024_BijectiveDiscretizedRotations
+# DiscreteRotationSpace
 
 Source code of JMIV Paper: 
 

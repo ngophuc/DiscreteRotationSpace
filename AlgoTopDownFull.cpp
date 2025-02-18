@@ -1,5 +1,6 @@
 #include "UtilityFunctions.h"
 #include "Algo2Functions.h"
+#include "CLI11.hpp"
 
 using namespace DGtal;
 using namespace Z2i;
@@ -11,6 +12,13 @@ string displayVector2(std::vector<int> v) {
 int main(int , char**) {
   //int r=5;//square of radius
   int mu=5;
+
+  CLI::App app;
+  app.description("Build the tree structure of finite rotations of Z^2.\n Typical use example:\n \t AlgoTopDown -r 10\n");
+  app.add_option("-r,--radius",mu,"Square of radius of the euclien ball (default 5)",true);
+  app.get_formatter()->column_width(40);
+  CLI11_PARSE(app, argc, argv);
+  
   //Section 9: Discrete rotation tree construction: Top-down
   
   //Generate sorted triplet B_mu sort without removing double angles

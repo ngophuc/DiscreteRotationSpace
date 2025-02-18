@@ -215,6 +215,9 @@ int compareHingeAngles(const vector<int>& a1, const vector<int>& a2) {
   int s = a2[1];
   int l = a2[2];
   
+  if(p==r && q==s && k==l)
+    return 0;
+  
   int a1_is_Zero = is_Zero(p,q,k);
   int a2_is_Zero = is_Zero(r,s,l);
   int a1_is_Pi = is_Pi(p,q,k);

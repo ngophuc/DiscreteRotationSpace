@@ -91,7 +91,7 @@ vector<vector<int> > sortTriplet(const vector<vector<int> >& triplets) {
   std::sort(begin(pqk_trie), end(pqk_trie), [](vector<int> t1, vector<int> t2) {
     return compareHingeAngles(t1, t2)<0;
   });
-  /* CHECK $/
+  /* CHECK 
   cout<<"After sorting"<<endl;
   for(auto p : pqk_trie) {
     cout<<"("<<p[0]<<","<<p[1]<<","<<p[2]<<") ==> "<<computeAngle(p)*180/M_PI<<endl;
@@ -244,7 +244,7 @@ nodeTree* findNodeOfPythagoreAngle(const vector<int>& angle, const vector<nodeTr
   //Handling the last segment in which leftAngle > rightAngle
   int cL = compareTripletPythagoreAngles(tmp_tree.back()->tripletLeft, angle);
   int cR = compareTripletPythagoreAngles(tmp_tree.back()->tripletRight, angle);
-  if(cL == -1 || cR == 1)//tripletLeft < angle or tripletRight > angle
+  if(cL == -1 || cR == 1)//tripletLeft < angle or tripletRight > angle
     return tmp_tree.back();
   
   //Anyother case

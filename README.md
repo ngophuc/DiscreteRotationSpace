@@ -1,4 +1,4 @@
-# JMIV_2024_BijectiveDiscretizedRotations
+# JMIV_2024_DiscreteRotationSpace
 
 Description
 ===========
